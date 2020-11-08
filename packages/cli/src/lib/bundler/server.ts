@@ -23,7 +23,7 @@ import { ServeOptions } from './types';
 import { resolveBundlingPaths } from './paths';
 
 export async function serveBundle(options: ServeOptions) {
-  const url = resolveBaseUrl(options.config);
+  const url = resolveBaseUrl(options.frontendConfig);
 
   const port = Number(url.port) || (url.protocol === 'https:' ? 443 : 80);
 
